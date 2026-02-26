@@ -11,6 +11,7 @@ body {
     flex-direction: row; /* Desktop par side-by-side */
     min-height: 100vh;
     background-color: #f4f7f6;
+    overflow-x: hidden; /* Screen se bahar nikalne se rokta hai */
 }
 
 /* Sidebar Styling */
@@ -22,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
+    flex-shrink: 0; /* Sidebar ko dabne se rokta hai */
 }
 
 .sidebar-footer {
@@ -36,6 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .page-header {
@@ -46,6 +49,7 @@ body {
 .main-title {
     color: #004d40;
     font-size: 2.5rem;
+    word-wrap: break-word;
 }
 
 /* App Container */
@@ -93,14 +97,7 @@ body {
     background-color: #e0f2f1;
     border-radius: 10px;
     text-align: center;
-}
-
-.res-label {
-    display: block;
-    font-size: 0.8rem;
-    color: #00796b;
-    font-weight: bold;
-    margin-bottom: 10px;
+    width: 100%;
 }
 
 .res-content {
@@ -108,22 +105,13 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap; /* Result agar bada ho to niche aa jaye */
 }
 
-.res-text {
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.res-emoji {
-    font-size: 2.5rem;
-}
-
-/* --- Responsive Magic (Mobile Settings) --- */
-
+/* --- Mobile Portrait Fix --- */
 @media (max-width: 768px) {
     body {
-        flex-direction: column; /* Mobile par sidebar upar aur content niche */
+        flex-direction: column; /* Portrait mein sidebar upar, content niche */
     }
 
     .sidebar {
@@ -131,10 +119,11 @@ body {
         height: auto;
         padding: 20px;
         text-align: center;
+        min-height: auto;
     }
 
     .main-content {
-        padding: 20px;
+        padding: 20px 10px; /* Side gaps kam kar diye */
     }
 
     .main-title {
@@ -143,5 +132,10 @@ body {
 
     .app-container {
         padding: 15px;
+        width: 95%; /* Mobile screen ke hisaab se fit */
+    }
+
+    .res-text {
+        font-size: 1.5rem;
     }
 }
