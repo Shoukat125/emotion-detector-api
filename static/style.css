@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* static/style.css */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,142 +6,79 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: row; /* Desktop par side-by-side */
-    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
     background-color: #f4f7f6;
-    overflow-x: hidden; /* Screen se bahar nikalne se rokta hai */
+    display: block; /* Flexbox hataya taake overlap na ho */
+    width: 100%;
 }
 
-/* Sidebar Styling */
+/* Sidebar as a Top Bar for Mobile, Side Bar for Desktop */
 .sidebar {
-    width: 280px;
     background-color: #004d40;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px;
-    flex-shrink: 0; /* Sidebar ko dabne se rokta hai */
+    padding: 20px;
+    width: 100%; /* Default 100% for mobile */
+    text-align: center;
 }
 
-.sidebar-footer {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Main Content Area */
 .main-content {
-    flex: 1;
-    padding: 40px;
+    width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
-.page-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.main-title {
-    color: #004d40;
-    font-size: 2.5rem;
-    word-wrap: break-word;
-}
-
-/* App Container */
 .app-container {
-    width: 100%;
+    width: 95%;
     max-width: 600px;
     background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.input-group textarea {
+textarea {
     width: 100%;
-    height: 150px;
-    padding: 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    resize: none;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+    height: 120px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .analyze-btn {
     width: 100%;
-    padding: 15px;
-    background-color: #00796b;
+    padding: 12px;
+    background: #00796b;
     color: white;
     border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
+    border-radius: 8px;
     font-weight: bold;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
-.analyze-btn:hover {
-    background-color: #004d40;
-}
-
-/* Prediction Display */
+/* Prediction Result Box */
 .result-display {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #e0f2f1;
-    border-radius: 10px;
-    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #e0f2f1;
+    border-radius: 8px;
     width: 100%;
+    text-align: center;
 }
 
-.res-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap; /* Result agar bada ho to niche aa jaye */
-}
-
-/* --- Final Bulletproof Mobile Portrait Fix --- */
-@media (max-width: 768px) {
+/* Desktop View Settings */
+@media (min-width: 769px) {
     body {
-        flex-direction: column !important; /* Force stack vertically */
-        display: block !important; /* Flexbox ka jhamela hi khatam mobile par */
-        width: 100% !important;
+        display: flex; /* Desktop par wapis side-by-side */
     }
-
     .sidebar {
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-        padding: 20px !important;
-        position: relative !important;
-        display: block !important;
+        width: 280px;
+        min-height: 100vh;
+        text-align: left;
     }
-
     .main-content {
-        width: 100% !important;
-        padding: 20px 10px !important;
-        display: block !important;
-    }
-
-    .app-container {
-        width: 95% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important; /* Center align */
-    }
-
-    .input-group textarea {
-        width: 100% !important;
-    }
-
-    .main-title {
-        font-size: 1.6rem !important;
+        flex: 1;
     }
 }
