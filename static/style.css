@@ -108,34 +108,40 @@ body {
     flex-wrap: wrap; /* Result agar bada ho to niche aa jaye */
 }
 
-/* --- Mobile Portrait Fix --- */
+/* --- Final Bulletproof Mobile Portrait Fix --- */
 @media (max-width: 768px) {
     body {
-        flex-direction: column; /* Portrait mein sidebar upar, content niche */
+        flex-direction: column !important; /* Force stack vertically */
+        display: block !important; /* Flexbox ka jhamela hi khatam mobile par */
+        width: 100% !important;
     }
 
     .sidebar {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-        text-align: center;
-        min-height: auto;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 20px !important;
+        position: relative !important;
+        display: block !important;
     }
 
     .main-content {
-        padding: 20px 10px; /* Side gaps kam kar diye */
-    }
-
-    .main-title {
-        font-size: 1.8rem;
+        width: 100% !important;
+        padding: 20px 10px !important;
+        display: block !important;
     }
 
     .app-container {
-        padding: 15px;
-        width: 95%; /* Mobile screen ke hisaab se fit */
+        width: 95% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important; /* Center align */
     }
 
-    .res-text {
-        font-size: 1.5rem;
+    .input-group textarea {
+        width: 100% !important;
+    }
+
+    .main-title {
+        font-size: 1.6rem !important;
     }
 }
