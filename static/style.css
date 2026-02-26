@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+    background-color: #f1f5f9;
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR - Isko thoda patla kiya hai */
+.sidebar {
+    width: 180px;
+    background-color: #00767a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.sidebar-footer p {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* MAIN CONTENT - Isko center aur compact kiya */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Screen ke beech mein lane ke liye */
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-title {
+    color: #0f172a;
+    font-size: 32px; /* Size kam kiya */
+    font-weight: 700;
+}
+
+.campus-title {
+    color: #64748b;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* APP CONTAINER - Iski width kam ki hai */
+.app-container {
+    width: 100%;
+    max-width: 550px; /* Pehle 750px tha, ab compact hai */
+}
+
+.input-form {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 100%;
+    height: 120px; /* Height kam ki */
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    resize: none;
+    outline: none;
+    transition: all 0.2s;
+}
+
+textarea:focus {
+    border-color: #00888D;
+    box-shadow: 0 0 0 3px rgba(0, 136, 141, 0.1);
+}
+
+/* BUTTON - Professional size aur alignment */
+.analyze-btn {
+    width: 30%; /* Full width button zyada modern lagta hai */
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #00888D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.analyze-btn:hover {
+    background-color: #006b6f;
+}
+
+/* style.css mein update karein */
+.result-display {
+    border-left: 10px solid #00888D; /* border-bottom ki jagah */
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.res-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.res-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.res-emoji {
+    font-size: 32px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Emotion Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <!-- <img src="https://cdn-icons-png.flaticon.com/512/3408/3408545.png" class="sidebar-img" alt="AI Icon"> -->
+            <!-- <h2 class="sidebar-brand">SMIT & TITAN</h2> -->
+            <!-- <p class="sidebar-loc">Sukkur Campus</p> -->
+        </div>
+        <div class="sidebar-footer">
+            <p>Powered by : SVC AI Models</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="main-title">AI Emotion Detector</h1>
+            <h3 class="campus-title">Analyse your Emotion with AI</h3>
+        </div>
+
+        <div class="app-container">
+            <form action="/predict" method="POST" class="input-form">
+                <div class="input-group">
+                    <textarea name="text_input" placeholder="Write any sentence here..." required>{{ original_text if original_text }}</textarea>
+                    <button type="submit" class="analyze-btn">Analyse Emotion</button>
+                </div>
+            </form>
+
+            {% if prediction %}
+            <div class="result-display">
+                <span class="res-label">AI PREDICTION</span>
+                <div class="res-content">
+                    <span class="res-text">{{ prediction }}</span>
+                    <span class="res-emoji">{{ emoji }}</span>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if warning %}
+            <div class="alert-box">{{ warning }}</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
