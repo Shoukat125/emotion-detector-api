@@ -10,24 +10,23 @@
 
 <div align="center">
 <h1> AI Emotion Detector: Sentiment Analysis & Linguistic Insights </h1>
-  <h1>NLP Emotion Recognition System</h1>
   <p><b>Machine Learning (SVC) + Real-time Flask API</b></p>
 </div>
 
 ---
 
 
-## 📌 Executive Summary
+## Executive Summary
 This project presents an advanced **Natural Language Processing (NLP)** solution to detect human emotions from textual data. The primary objective was to engineer a system that can understand the emotional tone of a sentence—ranging from **Joy and Love to Anger and Fear**—providing a bridge between human expression and machine intelligence.
 
-### 🛠️ Key Strategic Findings
+### Key Strategic Findings
 * **Linguistic Accuracy:** The system utilizes a Support Vector Classifier (SVC) to achieve high-precision classification across multiple emotion categories.
 * **Responsive Architecture:** Engineered with a mobile-first approach, ensuring the UI remains functional and clear in **Portrait Mode** across all devices.
 * **API Integration:** Ready for cross-platform deployment, allowing mobile applications to consume predictions via structured JSON responses.
 
 ---
 
-## 🧠 Machine Learning Architecture
+## Machine Learning Architecture
 
 ### A. Operational Layer: Support Vector Classifier (SVC)
 Unlike basic keyword matching, this layer analyzes the semantic structure of sentences.
@@ -43,7 +42,7 @@ To ensure the model is accessible to end-users, we implemented a robust Flask ba
 
 ---
 
-## 📊 Technical Specifications & Data Engineering
+## Technical Specifications & Data Engineering
 * **Preprocessing:** Applied tokenization and stop-word removal to clean textual noise.
 * **UI Framework:** Custom-built Flexbox/Block layout for maximum responsiveness.
 * **Performance Metrics:**
@@ -56,7 +55,7 @@ To ensure the model is accessible to end-users, we implemented a robust Flask ba
 * `templates/index.html`: Clean, intuitive user interface.
 * `model.pkl`: Serialized Machine Learning model for instant loading.
 
-## 🏁 Final Conclusion
+## Final Conclusion
 The project confirms that while text can be ambiguous, **Vector-based Machine Learning** can accurately decipher intent. This API serves as a foundation for sentiment-aware chatbots, customer feedback systems, and mental health monitoring tools.
 
 ---
