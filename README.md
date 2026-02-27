@@ -1,4 +1,12 @@
-# 🎭 AI Emotion Detector: Sentiment Analysis & Linguistic Insights
+<div align="center">
+  <a href="https://emotion-detector-app-steel.vercel.app/">
+    <img src="https://img.shields.io/badge/Vercel-Live%20App-000000?style=for-the-badge&logo=vercel" alt="Live App">
+  </a>
+  <a href="https://github.com/Shoukat125/emotion-detector-api/issues/1">
+    <img src="https://img.shields.io/badge/▶️_Watch-Technical_Demo-blue?style=for-the-badge&logo=github" alt="Demo Video">
+  </a>
+</div>
+# AI Emotion Detector: Sentiment Analysis & Linguistic Insights
 
 <div align="center">
   <img src="https://cdn-icons-png.flaticon.com/512/3408/3408545.png" width="120">
@@ -8,14 +16,6 @@
 
 ---
 
-<div align="center">
-  <a href="https://emotion-detector-app-steel.vercel.app/">
-    <img src="https://img.shields.io/badge/Vercel-Live%20App-000000?style=for-the-badge&logo=vercel" alt="Live App">
-  </a>
-  <a href="https://github.com/Shoukat125/emotion-detector-api/issues/1">
-    <img src="https://img.shields.io/badge/▶️_Watch-Technical_Demo-blue?style=for-the-badge&logo=github" alt="Demo Video">
-  </a>
-</div>
 
 ## 📌 Executive Summary
 This project presents an advanced **Natural Language Processing (NLP)** solution to detect human emotions from textual data. The primary objective was to engineer a system that can understand the emotional tone of a sentence—ranging from **Joy and Love to Anger and Fear**—providing a bridge between human expression and machine intelligence.
