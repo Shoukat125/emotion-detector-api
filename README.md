@@ -6,10 +6,10 @@
     <img src="https://img.shields.io/badge/▶️_Watch-Technical_Demo-blue?style=for-the-badge&logo=github" alt="Demo Video">
   </a>
 </div>
-**AI Emotion Detector: Sentiment Analysis & Linguistic Insights**
+
 
 <div align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/3408/3408545.png" width="120">
+<h1> AI Emotion Detector: Sentiment Analysis & Linguistic Insights </h1>
   <h1>NLP Emotion Recognition System</h1>
   <p><b>Machine Learning (SVC) + Real-time Flask API</b></p>
 </div>
